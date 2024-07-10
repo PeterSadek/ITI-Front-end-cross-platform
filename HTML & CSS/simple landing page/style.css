@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling the header section */
+
+.header {
+  background-image: url(./images/fashion-lady.jpg);
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 700px;
+}
+
+.header .nav {
+  display: flex;
+  background-color: beige;
+  align-items: center;
+  padding: 3px;
+  margin-top: 5px;
+  margin-bottom: 130px;
+}
+
+.header li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px;
+  color: rgb(161, 158, 158);
+}
+
+.header a {
+  text-decoration: none;
+  color: rgb(161, 158, 158);
+}
+
+.header a:hover {
+  color: rgb(231, 166, 177);
+}
+
+.opening-text {
+  color: aliceblue;
+}
+
+.header .sitename {
+  color: rgb(231, 166, 177);
+  font-weight: bold;
+}
+
+.header .line {
+  background-color: aliceblue;
+  height: 2px;
+  margin-bottom: 2px;
+}
+
+.header .text1 {
+  background-color: rgb(231, 166, 177);
+  padding: 5px;
+}
+
+.header .text2 {
+  margin-bottom: 5px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(196, 120, 130);
+  margin: 10px;
+}
+
+/* styling the services section */
+
+.maincontent {
+  margin: 20px 50px;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.services .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.services .card {
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+}
+
+.services .card1 {
+  background-color: rgb(190, 168, 172);
+}
+
+.services .card2 {
+  background-color: rgb(151, 113, 120);
+}
+
+.services .card3 {
+  background-color: rgb(238, 133, 152);
+}
+
+.services .card4 {
+  background-color: rgb(145, 123, 127);
+}
+
+/* styling the portfolio section */
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.portfolio .portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.portfolio-images img {
+  width: 20%;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.caption {
+  color: rgb(161, 158, 158);
+  font-weight: bold;
+}

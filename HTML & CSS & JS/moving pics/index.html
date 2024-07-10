@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 400px;
+        height: 400px;
+        border: 2px solid red;
+        position: relative;
+      }
+      img {
+        position: absolute;
+      }
+      #left {
+        left: 0;
+        top: 170px;
+      }
+      #right {
+        right: 0;
+        top: 170px;
+      }
+      #top {
+        top: 0;
+        left: 180px;
+      }
+      button {
+        margin: 5px;
+        padding: 5px;
+        width: 50px;
+      }
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img id="left" src="/images/icon1.gif" alt="first icon" /><img
+        id="right"
+        src="./images/icon2.gif"
+        alt="second icon"
+      /><img id="top" src="./images/TOP.JPG" alt="top icon" />
+    </div>
+    <div class="buttons">
+      <button id="goBtn">Go</button><button id="resetBtn">Reset</button>
+    </div>
+    <div class="info">
+      <p id="leftinfo"></p>
+      <p id="rightinfo"></p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

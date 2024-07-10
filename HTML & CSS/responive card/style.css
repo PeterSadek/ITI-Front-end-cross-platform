@@ -1,0 +1,149 @@
+@font-face {
+  font-family: font1;
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+:root {
+  font-size: 18px;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: font1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 0.7rem 0.7rem hsl(221, 100%, 96%);
+  border-radius: 1rem;
+  margin: auto;
+}
+
+section {
+  width: 12rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem 2rem;
+}
+
+/* result section */
+.result {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  color: hsl(0, 0%, 100%);
+}
+
+.result h3,
+.text p:last-child {
+  color: hsl(241, 100%, 89%);
+}
+
+.text p:last-child {
+  font-size: 0.9rem;
+}
+
+.circle {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+}
+
+.circle .dim {
+  margin-top: -3rem;
+}
+
+.circle p:first-child {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.text {
+  text-align: center;
+}
+
+.text p:first-child {
+  font-size: 1.3rem;
+}
+
+.dim {
+  color: hsl(241, 100%, 89%);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* summary section */
+.summary {
+  background-color: hsl(0, 0%, 100%);
+  gap: 0.5rem;
+}
+
+.summary h3 {
+  align-self: start;
+}
+.score {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+.image {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.score:nth-child(2) {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.score:nth-child(3) {
+  color: hsl(39, 100%, 56%);
+  background-color: hsl(39, 100%, 56%, 0.1);
+}
+.score:nth-child(4) {
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+.score:nth-child(5) {
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.summary .val {
+  color: hsl(224, 30%, 27%);
+}
+
+button {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+}

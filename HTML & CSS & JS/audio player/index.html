@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        padding: 10px;
+        border: 1px solid grey;
+      }
+      li:nth-child(even) {
+        background-color: rgb(19, 126, 197);
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        margin-inline: auto;
+        border: 1px solid grey;
+        background-color: rgb(168, 207, 194);
+      }
+      #cover {
+        width: 150px;
+        height: 150px;
+        margin: 0 10px;
+      }
+      #coverImage {
+        width: 150px;
+        height: 150px;
+      }
+      .player {
+        display: flex;
+        justify-content: center;
+      }
+      #controls {
+        margin: auto 10px;
+      }
+      #time {
+        display: block;
+      }
+      #volume {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="player">
+        <div id="cover">
+          <img
+            src="./audio/covers/default-cover.png"
+            alt="song cover"
+            id="coverImage"
+          />
+        </div>
+        <div id="controls">
+          <input type="range" name="" id="time" value="0" min="0" max="" />
+          <button id="play">Play</button>
+          <button id="pause">Pause</button>
+          <button id="stop">Stop</button>
+          <button id="mute">Mute</button>
+          <input
+            type="range"
+            name=""
+            id="volume"
+            value="0.2"
+            step="0.1"
+            min="0"
+            max="1"
+          />
+        </div>
+      </div>
+      <div class="songs">
+        <ul>
+          <li id="yourPowerItem">Billie Eilish - Your Power</li>
+          <li id="makeAShadowItem">Meg Myers - Make a Shadow</li>
+          <li id="iFallApartItem">Post Malone - I Fall Apart</li>
+          <li id="everybodyKnowsItem">Sigrid - Evereybody Knows</li>
+        </ul>
+      </div>
+      <audio id="mainAudio" src=""></audio>
+      <audio src="./audio/Billie Eilish - Your Power.mp3"></audio>
+      <audio src="audio/Meg Myers - Make a Shadow.mp3"></audio>
+      <audio src="audio/Post Malone - I Fall Apart.mp3"></audio>
+      <audio src="audio/Sigrid - Evereybody Knows.mp3"></audio>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

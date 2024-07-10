@@ -1,0 +1,178 @@
+/* Typography */
+:root {
+  font-size: 13px;
+}
+body {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: barlowReg;
+  src: url("./fonts/BarlowSemiCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: barlowSemiBold;
+  src: url("./fonts/BarlowSemiCondensed-SemiBold.ttf");
+}
+@font-face {
+  font-family: barlowMed;
+  src: url("./fonts/BarlowSemiCondensed-Medium.ttf");
+}
+
+.name {
+  font-family: barlowMed;
+}
+
+.title,
+.content {
+  font-family: barlowReg;
+}
+
+.intro {
+  font-family: barlowSemiBold;
+}
+
+/* Colors */
+body {
+  background-color: hsl(0, 0%, 81%);
+}
+
+main article:nth-child(1) {
+  background-color: hsl(263, 55%, 52%);
+}
+
+main article:nth-child(2) {
+  background-color: hsl(217, 19%, 35%);
+}
+
+main article:nth-child(3) {
+  background-color: hsl(0, 0%, 100%);
+}
+
+main article:nth-child(4) {
+  background-color: hsl(219, 29%, 14%);
+}
+
+main article:nth-child(5) {
+  background-color: hsl(0, 0%, 100%);
+}
+
+main article:nth-child(1) .intro,
+main article:nth-child(2) .intro,
+main article:nth-child(4) .intro {
+  color: hsl(0, 0%, 100%);
+}
+
+main article:nth-child(3) .intro,
+main article:nth-child(5) .intro {
+  color: hsl(217, 19%, 35%);
+}
+
+/* main article:nth-child(1) .content, */
+main article:nth-child(2) .content,
+main article:nth-child(3) .content,
+main article:nth-child(4) .content,
+main article:nth-child(5) .content {
+  color: hsl(217, 9%, 62%);
+}
+
+main article:nth-child(1) .content {
+  color: rgb(161, 160, 160);
+}
+
+/* main article:nth-child(1) .title, */
+main article:nth-child(2) .title,
+main article:nth-child(3) .title,
+main article:nth-child(4) .title,
+main article:nth-child(5) .title {
+  color: hsl(217, 9%, 62%);
+}
+
+main article:nth-child(1) .title {
+  color: rgb(161, 160, 160);
+}
+
+main article:nth-child(1) .name,
+main article:nth-child(1) .name,
+main article:nth-child(2) .name,
+main article:nth-child(4) .name {
+  color: hsl(0, 0%, 100%);
+}
+
+/* Layout */
+article {
+  padding: 2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 0.7rem 0.5rem hsl(210, 70%, 82%);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.intro {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+header img {
+  border-radius: 50%;
+}
+
+main article:nth-child(1) .image img,
+main article:nth-child(4) .image img {
+  border: 0.3rem solid hsl(263, 52%, 64%);
+}
+
+.title {
+  margin-top: -1rem;
+}
+
+main article:nth-child(1) {
+  position: relative;
+  z-index: 100;
+}
+#quotation {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  z-index: -1;
+}
+
+/* Media query */
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-areas:
+      "daniel daniel jona kira"
+      "jean patrick patrick kira";
+  }
+
+  main article:nth-child(1) {
+    grid-area: daniel;
+  }
+
+  main article:nth-child(2) {
+    grid-area: jona;
+  }
+
+  main article:nth-child(3) {
+    min-width: 180px;
+    grid-area: jean;
+  }
+
+  main article:nth-child(4) {
+    grid-area: patrick;
+  }
+
+  main article:nth-child(5) {
+    grid-area: kira;
+  }
+}
