@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .images {
+        width: 150px;
+        height: 150px;
+        position: relative;
+      }
+
+      #popout {
+        position: absolute;
+        display: flex;
+        width: 600px;
+        height: 400px;
+        top: 15%;
+        left: 25%;
+        align-items: center;
+      }
+
+      .btn {
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+      }
+
+      #inner {
+        width: 400px;
+        height: 400px;
+      }
+
+      #inner img {
+        display: none;
+        width: 400px;
+        height: 400px;
+      }
+
+      #inner img.active {
+        display: inline-block;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+      }
+    </style>
+    <script src="jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <img
+        src="./images/1.jpg"
+        alt="cute girl"
+        id="image1"
+        class="images"
+      /><img
+        src="./images/2.jpg"
+        alt="cute girl"
+        id="image2"
+        class="images"
+      /><img
+        src="./images/3.jpg"
+        alt="cute girl"
+        id="image3"
+        class="images"
+      /><img src="./images/4.jpg" alt="cute girl" id="image4" class="images" />
+    </div>
+    <div id="overlay">
+      <div id="popout">
+        <div id="inner">
+          <img src="./images/1.jpg" alt="girl" /><img
+            src="./images/2.jpg"
+            alt="girl"
+          /><img src="./images/3.jpg" alt="girl" /><img
+            src="./images/4.jpg"
+            alt="girl"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

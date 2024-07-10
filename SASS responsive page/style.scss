@@ -1,0 +1,162 @@
+// General variables
+$backgrounColor1: rgb(96, 125, 139);
+$backgroundColor2: rgb(0, 0, 0);
+$backgroundColor4: rgb(63, 81, 181);
+$backgroundColor3: rgb(97, 97, 97);
+$textColor1: rgb(255, 255, 255);
+$textColor2: rgb(63, 81, 181);
+$generalPad: 0.5rem;
+
+// Mixins for styling
+@mixin headerStyle {
+  background-color: $backgroundColor2;
+  margin: $generalPad -1rem;
+  padding: 1rem;
+  text-align: center;
+  color: $textColor1;
+}
+
+@mixin btnStyle {
+  background-color: $backgroundColor3;
+  color: $textColor1;
+  padding: $generalPad;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+@mixin imgStyle {
+  width: 100%;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  object-fit: cover;
+}
+
+@mixin headerFooterStyle {
+  background-color: $backgrounColor1;
+  color: $textColor1;
+  padding: $generalPad;
+  margin: 0 -1rem;
+}
+
+@mixin card {
+  margin-bottom: 1rem;
+  li {
+    border-bottom: 0.1rem solid $backgrounColor1;
+  }
+
+  header,
+  footer {
+    color: $textColor1;
+  }
+}
+
+// Grid system
+$total: 12;
+
+@function cols($col) {
+  @return percentage($col/$total);
+}
+
+@for $i from 1 through $total {
+  .col-#{$i} {
+    width: cols($i);
+  }
+}
+
+// Media query
+@media screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+// General styles
+body {
+  box-sizing: border-box;
+  margin: 1rem;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  li {
+    margin-right: 1rem;
+  }
+}
+
+.main-header {
+  @include headerStyle();
+}
+
+#btn1 {
+  @include btnStyle();
+}
+
+#btn2 {
+  @include btnStyle();
+  background-color: $backgroundColor2;
+}
+
+p {
+  color: $backgroundColor3;
+}
+
+#header,
+#footer {
+  @include headerFooterStyle();
+  clear: both;
+}
+img {
+  @include imgStyle();
+}
+
+main section:first-child {
+  margin: 3rem 0;
+}
+
+main section:last-child h2 {
+  text-align: center;
+}
+
+.card {
+  @include card();
+}
+
+.card li,
+.card footer {
+  padding: $generalPad;
+}
+
+.card1 header,
+.card1 footer {
+  padding: 0.5rem;
+  background-color: $backgroundColor4;
+}
+
+.card1 .first {
+  color: $textColor2;
+}
+
+.card2 header,
+.card2 footer {
+  padding: $generalPad;
+  background-color: $backgroundColor2;
+}
+
+.card ul li:first-child {
+  font-size: 1.5rem;
+}
+
+section h2 {
+  margin-top: 3rem;
+}
